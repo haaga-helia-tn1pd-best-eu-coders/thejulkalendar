@@ -1,23 +1,28 @@
 <html>
     <head>
-    <meta charset="UTF-8">
+        <meta charset="UTF-8">
         <title>Joulu Kalenteri </title>
-
-<link href="./css/tyylit.css" rel="stylesheet" type "text/css"/>
+        <meta name="robots" content="noindex, nofollow">
+        <meta name="googlebot" content="noindex, nofollow">
+        <link href="./css/tyylit.css" rel="stylesheet" type "text/css"/>
         <link href="https://fonts.googleapis.com/css?family=Mountains+of+Christmas:700" rel="stylesheet">
     </head>
+    <!--          BREAK         -->
     <body>
 
-        <h1>The Julkalender</h1>
-
+      <div id="snowflakeContainer">
+        <!--      SIGNIFIES SNOWFLAKE      -->
+        <p class="snowflake">A</p>
+      </div>
+    <!--          CALENDAR starts         -->
+    <div id="content">  <h1>The Julkalender</h1> </div>
         <table>
-
 <tr>
     <td>
         <div class="flip-container" onclick="checkifCorrectDate(this, '2017-11-05')">
             <div class="flipper">
                 <div class="front">5</div>
-                <div class="back"></div>
+                <div class="back">VUANN</div>
             </div>
         </div>
     </td>
@@ -212,11 +217,14 @@
         </div>
     </td>
 </tr>
-
 </table>
 
-        <marquee behavior="scroll" direction="left" scrollamount="10">Hyvää Joulua!!!!!!!!!</marquee>
+    <marquee behavior="scroll" direction="left" scrollamount="10">Hyvää Joulua!!!!!!!!!</marquee>
 
+
+<!-- SNOWFLAKE JS -->
+<script src='./scripts/snow.js'></script>
+<!-- BOX FLIP JS *TOMMI* -->
  <script type="application/javascript">
     function checkifCorrectDate(div, divDate) {
         date = new Date()
@@ -227,10 +235,10 @@
             div.classList.toggle('hover');
         }
         else {
-            alert("It is not this day yet!")
+            alert("It is not this day yet!");
         }
     }
     </script>
-      
+
     </body>
 </html>
