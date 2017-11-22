@@ -76,9 +76,17 @@
         <div class="flip-container" id="placeholder1" onclick="checkifCorrectDate(this)">
             <div class="flipper">
                 <div class="front">1</div>
-                <div class="back"><a href="#" onclick="show('luukku11')"><img src="images/box.png"></a></div>
+                <div class="back"><a class="button" href="#popup1">1<img src="images/box.png"></a></div>
             </div>
         </div>
+        <div id="popup1" class="overlay">
+         <div class="popup">
+            <a class="close" onclick="closeVideo()" href="#">X</a>
+            <div class="content">
+              <iframe class="video1" src="https://www.youtube.com/embed/ARJ8cAGm6JE?autoplay=1&controls=0"></iframe> <!-- video liian pitkä -->
+            </div>
+          </div>
+       </div>
     </td>
     <td>
         <div class="flip-container" id="placeholder16" onclick="checkifCorrectDate(this)">
@@ -307,6 +315,5 @@
       openLidsOfPreviousDays()
       highlightCurrentDay()
         </script>
-
     </body>
 </html>
