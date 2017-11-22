@@ -332,7 +332,14 @@ p, ol {
   transition: all 5s ease-in-out;
   z-index: 50;
 }
-
+.content {
+  max-width: 100%;
+  max-height: 100%;
+}
+.content img {
+  max-width: 100%;
+  max-height: 100%;
+}
 .popup h2 {
   margin-top: 0;
   color: #333;
