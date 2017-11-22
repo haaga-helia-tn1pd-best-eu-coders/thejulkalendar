@@ -10,59 +10,12 @@
     <!--          BREAK         -->
     <body>
     <script>
-    const calendarActivationMonth = 11     <!-- Change this to the month you wish to use the calendar in -->
+    const calendarActivationMonth = 11     //  Change this to the month you wish to use the calendar in
     const calendarActivationYear = 2017
     </script>
     <!-- XMAS LIGHTS -->
-    <ul class="lightrope">
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
+    <ul class="lightrope" id="lightrope">
+        <!-- Script below will write here 85 <li> elements -->
       </ul>
 
     <!--          CALENDAR starts         -->
@@ -287,6 +240,7 @@
 <script type='text/javascript' src='./scripts/popup.js'></script>
 <!-- BOX FLIP JS *TOMMI* -->
  <script type="application/javascript">
+    // Check lid should be able to be opened today
     function checkifCorrectDate(div) {
         divDate = div.id
         date = new Date()
@@ -298,11 +252,13 @@
             alert("It is not this day yet!");
         }
     }
+     // Highlight current day
     function highlightCurrentDay() {
         date = new Date()
         dateString = (calendarActivationYear + '-' + (calendarActivationMonth) + '-' + date.getDate())
         document.getElementById(dateString).style.color = "white";
     }
+     // Open lids of previous days, but not the current one
     function openLidsOfPreviousDays() {
         date = new Date()
         var day = date.getDate()
@@ -319,6 +275,7 @@
             document.getElementById(dateString).classList.add('hover')
             }
     }
+    // Change 'placeholder' -divid's to format YYYY-MM-DD'
     function setDivIdsToMatchGivenMonthAndYear() {
         var date = new Date()
         var divs = document.getElementsByTagName("div");
@@ -328,7 +285,6 @@
            }
            var divsLeftToProcess = 24
             for(var x = 1; x <= divsLeftToProcess; x++){
-               //do something to each div like
                 if (divs[i].id.toString() == ('placeholder'+x).toString()) {
                     divs[i].setAttribute("id", calendarActivationYear + '-' + calendarActivationMonth + '-' + x)
                     divsLeftToProcess -= 1
@@ -337,10 +293,16 @@
                }
        } 
     }
-     
+    function addLightRopes() {
+        for(var x = 0; x <= 85; x++) {
+            var li = document.createElement("LI");
+            document.getElementById("lightrope").appendChild(li)
+        }
+        
+    }
     </script>
         <script>
-
+      addLightRopes()
       setDivIdsToMatchGivenMonthAndYear()
       openLidsOfPreviousDays()
       highlightCurrentDay()
