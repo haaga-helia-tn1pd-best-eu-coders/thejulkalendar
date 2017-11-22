@@ -292,7 +292,6 @@
         date = new Date()
         divDate = new Date(divDate)
         if (date >= divDate) {
-            console.log(date, divDate)
             div.classList.add('hover');
         }
         else {
@@ -322,18 +321,20 @@
     }
     function setDivIdsToMatchGivenMonthAndYear() {
         var date = new Date()
-    var divs = document.getElementsByTagName("div");
-    for(var i = 1; i < divs.length; i++){
-       var divsLeftToProcess = 24
-        for(var x = 1; x <= divsLeftToProcess; x++){
-           //do something to each div like
-            if (divs[i].id.toString() == ('placeholder'+x).toString()) {
-                divs[i].setAttribute("id", calendarActivationYear + '-' + calendarActivationMonth + '-' + x)
-                console.log('Changed! ' + divs[i].id)
-                divsLeftToProcess -= 1
-            }
-
+        var divs = document.getElementsByTagName("div");
+        for(var i = 1; i < divs.length; i++){
+           if (divs[i].id.substring(0,11) != 'placeholder') {
+               continue
            }
+           var divsLeftToProcess = 24
+            for(var x = 1; x <= divsLeftToProcess; x++){
+               //do something to each div like
+                if (divs[i].id.toString() == ('placeholder'+x).toString()) {
+                    divs[i].setAttribute("id", calendarActivationYear + '-' + calendarActivationMonth + '-' + x)
+                    divsLeftToProcess -= 1
+                }
+
+               }
        } 
     }
      
