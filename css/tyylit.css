@@ -82,7 +82,7 @@ marquee {
 .back {
   width: 82px;
   height: 88px;
-  
+
 }
 .flipper {
   transition: 0.6s;
@@ -276,84 +276,82 @@ p, ol {
     background: rgba(247, 0, 148, 0.4);
     box-shadow: 0px 4.66667px 24px 3px rgba(247, 0, 148, 0.2);
   }
-<<<<<<< HEAD
+}
+/*    POPUP   */
+.box {
+  width: 20%;
+  margin: 0 auto;
+  background: rgba(255,255,255,0.2);
+  padding: 35px;
+  border: 2px solid #fff;
+  border-radius: 20px/50px;
+  background-clip: padding-box;
+  text-align: center;
 }
 
-/*      PUPUP       */
-.popup {
-  display: none;
-  position: fixed;
+.button {
+  font-size: 1em;
   padding: 10px;
-  width: 280px;
-  left: 50%;
-  margin-left: -150px;
-  height: 180px;
-  top: 50%;
-  margin-top: -100px;
-  background: transparent;
-  z-index: 20;
-    
-}
-
-#popup1 {
-  -webkit-box-shadow:  0px 0px 0px 9999px rgba(0, 0, 0, 0.5);
-  box-shadow:  0px 0px 0px 9999px rgba(0, 0, 0, 0.5);
-}
-
-#popup2:after {
-  position: fixed;
-  content: "";
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  background: rgba(0,0,0,0.5);
-  z-index: -2;
-}
-
-#popup2:before {
-  position: absolute;
-  content: "";
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  background: #FFF;
-  z-index: -1;
-}
-
-/* From here on, just aesthetics */
-
-
-a,
-a:visited {
+  color: #fff;
+  /*border: 2px solid orange;*/
+/*border-radius: 20px/50px;*/
   text-decoration: none;
-  color: #FFF;
+  cursor: pointer;
+  transition: all 0.3s ease-out;
+}
+.button:hover {
+
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.7);
+  transition: opacity 500ms;
+  visibility: hidden;
+  opacity: 0;
+  z-index: 49;
+}
+.overlay:target {
+  visibility: visible;
+  opacity: 1;
+}
+
+.popup {
+  margin: 70px auto;
+  margin-top: 10%;
+  padding: 20px;
+  background: #fff;
+  border-radius: 5px;
+  width: auto;
+  max-width: 35%;
+  position: relative;
+  transition: all 5s ease-in-out;
+  z-index: 50;
+}
+
+.popup h2 {
+  margin-top: 0;
+  color: #333;
+  font-family: Tahoma, Arial, sans-serif;
+}
+.popup .close {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  transition: all 200ms;
+  font-size: 30px;
   font-weight: bold;
-  display: block;
-  margin: 10px 0;
+  text-decoration: none;
+  color: #333;
 }
-
-a:hover,
-a:active {
-  text-decoration: underline;
+.popup .close:hover {
+  color: orange;
 }
-
-.popup a,
-.popup a:visited {
-  color: #1abc9c;
-}
-
-.popup-luukku {
-	margin: 1em 0;
-}
-
-.popup-luukku+.popup-luukku+.popup-luukku {
-	font-size: 60%;
-=======
->>>>>>> 89486bf4be3247674f1c434cadf2127cd7fbbb07
-}
-.popup-luukku img {
-    width: 1000%;
-    height: auto;
+.popup .content {
+  max-height: auto;
+  overflow: auto;
 }

@@ -180,8 +180,16 @@
         <div class="flip-container" id="2017-11-22" onclick="checkifCorrectDate(this, '2017-11-22')">
             <div class="flipper">
                 <div class="front">22</div>
-                <div class="back"><a href="#" onclick="show('luukku11')"><img src="images/box.png"></a></div>
+                <div class="back"> <!-- <a href="#" onclick="show('luukku11')"> --> <a class="button" href="#popup11"><img src="images/box.png"></a></div>
             </div>
+        </div>
+        <div id="popup11" class="overlay">
+          <div class="popup">
+            <a class="close" href="">×</a>
+            <div class="content">
+            <img src="./images/11.jpg">
+            </div>
+          </div>
         </div>
     </td>
     <td>
@@ -272,13 +280,6 @@
 
     <marquee behavior="scroll" direction="left" scrollamount="10">Hyvää Joulua!!!!!!!!!</marquee>
 
-
-
-        <div class="popup" id="luukku11">
-        <p class="popup-luukku"><img src="images/11.jpg"></p>
-        </div>
-
-
 <!-- SNOWFLAKE JS -->
 <!-- updated on 181117 vuan -->
 <script type='text/javascript' src='./scripts/snowmin2.js'></script>
@@ -301,9 +302,7 @@
     function highlightCurrentDay() {
         date = new Date()
         dateString = (date.getFullYear() + '-' + (date.getMonth()+1) + '-' + date.getDate())
-<<<<<<< HEAD
         document.getElementById(dateString).style.color = "red";
-=======
         document.getElementById(dateString).style.color = "white";
     }
     function openLidsOfPreviousDays() {
@@ -318,16 +317,12 @@
             }
             dateString = (date.getFullYear() + '-' + (date.getMonth()+1) + '-' + i)
             document.getElementById(dateString).classList.add('hover')
-            }
->>>>>>> 15df8427b5dbb8950611f11d54a9096b2133d46d
+           }
     }
     </script>
         <script>
       highlightCurrentDay()
-<<<<<<< HEAD
-=======
       openLidsOfPreviousDays()
->>>>>>> 15df8427b5dbb8950611f11d54a9096b2133d46d
         </script>
 
     </body>
