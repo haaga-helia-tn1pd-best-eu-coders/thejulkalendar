@@ -38,26 +38,25 @@ table{
 	box-shadow: 20px 20px 20px 0px rgba(0,0,0,0.2);
 	border-radius: 7px;
   position: absolute;
-  width: 60%;
+    width: 60%;
+  border-collapse: collapse;
 }
+td {text-align: center;border: 2px outset black;padding: 15px;padding-left: 40px;padding-right: 40px;}
 /*Table inside*/
+
 div.back img {
     width: 100%;
-    height: auto;
+    margin-right: -90px;
 }
 
-
 tb,  tr, td > div  {
-	border-style: outset;
-	border-color: white;
+
 	font-family: verdana;
 	font-size: 80px;
 	background-color: transparent;
 	border-width: 1px;
 	font-family: 'Mountains of Christmas', cursive, bold;
-    text-align: right;
-    padding-left: 20;
-    padding-right: 60;
+    text-align: center;
     width: 100%;
   cursor: pointer;
 }
@@ -288,7 +287,9 @@ p, ol {
   background-clip: padding-box;
   text-align: center;
 }
-
+.button img {
+  margin-left: -10px;
+}
 .button {
   font-size: 1em;
   padding: 10px;

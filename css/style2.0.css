@@ -20,12 +20,13 @@ h2{
 }
 
 /*Table inside*/
-div.back img {width: 100%;height: auto;}
+div.back img {width: 100%;}
 table #kalenteri, tr, td {
     font-size: 70px; 
 }
 table#kalenteri {border-collapse: collapse;margin:0 auto;}
-td {text-align: center;border: 2px solid black;}
+td {text-align: center;border: 2px solid black;padding: 15px;padding-left: 40px;padding-right: 40px;}
+div.back a {font-size: 20px;text-decoration: none;color: black;}
 /* tb,  tr, td > div  {
 	border-style: outset;
 	border-color: white;
