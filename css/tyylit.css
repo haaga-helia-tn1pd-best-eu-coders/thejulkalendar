@@ -120,6 +120,9 @@ h1 {
   margin-bottom: 20px;
   text-align: center;
 }
+h3 {
+    font-family: "Franklin Gothic Medium", "Arial Narrow", sans-serif;
+}
 p, ol {
   font-family: "Franklin Gothic Medium", "Arial Narrow", sans-serif;
   font-size: 24px;

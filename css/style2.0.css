@@ -2,7 +2,7 @@
   font-family: kr_kinda_flakeyregular; src: url('../fonts/KR Kinda Flakey.ttf');
 }
 body {
-  background-image: url("../images/tausta2.jpg");
+  background-image: url("../images/tausta2.png");
   background-repeat: no-repeat;
   position: relative;
   background-size: cover;
@@ -19,13 +19,18 @@ h2{
   color:hsla(255, 255%, 255%, .1);
 }
 
+h3 {
+    font-family: "Mountains of Christmas";
+    font-size:50;
+}
+
 /*Table inside*/
 div.back img {width: 100%;}
 table #kalenteri, tr, td {
     font-size: 70px; 
 }
 table#kalenteri {border-collapse: collapse;margin:0 auto;}
-td {text-align: center;border: 2px solid black;padding: 15px;padding-left: 40px;padding-right: 40px;}
+td {font-family: 'Mountains of Christmas', cursive, bold;text-align: center;border: 2px solid black;padding: 15px;padding-left: 40px;padding-right: 40px;}
 div.back a {font-family: 'Amatic SC', cursive;font-weight: bold; font-size: 18px;text-decoration: none;color: black;}
 /* tb,  tr, td > div  {
 	border-style: outset;
@@ -286,3 +291,4 @@ iframe {
   overflow: auto;
   overflow: hidden;
 }
+
